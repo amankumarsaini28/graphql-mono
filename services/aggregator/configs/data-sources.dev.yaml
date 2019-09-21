@@ -1,0 +1,8 @@
+Query:
+  tasks:
+    URL: 'http://localhost:4001/api/v1/task'
+    METHOD: 'GET'
+Mutation:
+  addTask:
+    URL: 'http://localhost:4001/api/v1/task'
+    METHOD: 'POST'

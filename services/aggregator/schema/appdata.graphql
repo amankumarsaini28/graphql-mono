@@ -1,0 +1,37 @@
+type Query {
+    course(id: Int!): Course
+    courses(topic: String): [Course]
+    tasks(assignee: String, createdBy: String, id: Int ): [Task]
+}
+
+type Mutation {
+  addTask(task: TaskInput!): Task
+}
+
+input TaskInput {
+  id: Int!
+  title: String
+  description: String
+  dueDate: String
+  created: String
+  started: String
+  createdBy: String
+  assignee: String
+}
+
+type Task {
+  id: Int!
+  title: String
+  description: String
+  dueDate: String
+  created: String
+  started: String
+  createdBy: String
+  assignee: String
+}
+
+type Course {
+    id: Int
+    title: String
+    tasks: [Task]
+}
